@@ -23,7 +23,7 @@ public class Main {
 //        Scan.measureRooms();
 
         //Loops
-        System.out.println("Loops and Control Structures");
+//        System.out.println("Loops and Control Structures");
 //        Loopy.whileLoop();
 //        Loopy.evens();
 //        Loopy.fives();
@@ -31,6 +31,13 @@ public class Main {
 //        Loopy.forEvens();
 //        Loopy.forFives();
 //        Loopy.forSquares();
-        Loopy.fizzBuzz();
+//        Loopy.fizzBuzz();
+//        Loopy.showMeThePowers();
+//        Loopy.letterGrades();
+
+        //Strings
+        System.out.println("Strings y'all!");
+        StringBuffer result = Stringy.stringBasics();
+        System.out.println(result);
     }
 }

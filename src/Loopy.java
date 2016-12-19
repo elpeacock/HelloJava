@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Created by user on 12/15/16.
  */
@@ -84,6 +86,102 @@ public class Loopy {
         }
     }
 
-    
+    //Powers
+    public static void showMeThePowers() {
+        int i;
+        int guess;
+        String response = "yes";
+
+        System.out.println("I will maths you a list of squares and cubes up to your given integer");
+        do {
+            System.out.println("Enter an integer: ");
+            Scanner sc = new Scanner(System.in);
+            guess = sc.nextInt();
+
+            System.out.println("Even Squares between 1 and " + guess + " are: ");
+            for (i = 1; i * i < guess; i++) {
+                System.out.print(i * i + " ");
+            }
+            System.out.println(" ");
+
+            System.out.println("Even Cubes between 1 and " + guess + " are: ");
+            for (i = 1; Math.pow(i, 3) < guess; i++) {
+                System.out.print((int) Math.pow(i, 3) + " ");
+            }
+            System.out.println(" ");
+            System.out.println("Do you want to find more squares/cubes? (yes/no): ");
+            response = sc.next();
+            sc.nextLine();
+        } while ("yes".equalsIgnoreCase(response));
+
+        System.out.println ("See ya later, Alligator");
+    }
+
+    // Percentage to Letter Grades
+    public static void letterGrades() {
+        // the number percentage user gives
+        int numberGrade;
+        // response for do while loop
+        String response = "yes";
+        // holds the letter grade
+        String letterGrade;
+
+        System.out.println("I'll convert your grade percentage to a letter grade");
+        do {
+            System.out.println("Enter a percentage between 0 and 100: ");
+            Scanner sc = new Scanner(System.in);
+            numberGrade = sc.nextInt();
+
+            // divide by 10 to get single #'s for cases
+            int quotient = numberGrade / 10;
+            switch(quotient) {
+                case 10:
+                    letterGrade = "A+";
+                    break;
+                case 9:
+                    letterGrade = "A";
+                    break;
+                case 8:
+                    letterGrade = "B";
+                    break;
+                case 7:
+                    letterGrade = "C";
+                    break;
+                case 6:
+                    letterGrade = "D";
+                    break;
+                default:
+                    letterGrade = "F";
+
+            }
+
+            // modulus 10 for +/-
+            int remainder = numberGrade % 10;
+            switch(remainder) {
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                    letterGrade += "-";
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    letterGrade += "+";
+            }
+
+
+            System.out.println(numberGrade + " is a(n) " + letterGrade);
+            System.out.println("convert another grade? (yes/no): ");
+            response = sc.next();
+            sc.nextLine();
+
+        } while ("yes".equalsIgnoreCase(response));
+
+        System.out.println("see ya later");
+
+    }
+
+
 
 }

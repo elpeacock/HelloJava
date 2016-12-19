@@ -5,10 +5,10 @@ public class Scan {
 
     public static void measureRooms() {
         String response = "yes";
-        Double length;
-        Double width;
-        Double area;
-        Double perimeter;
+        double length;
+        double width;
+        double area;
+        double perimeter;
 
         System.out.println("Let's measure the rooms!!");
 
