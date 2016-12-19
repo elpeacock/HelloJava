@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -37,7 +35,8 @@ public class Main {
 
         //Strings
         System.out.println("Strings y'all!");
-        StringBuffer result = Stringy.stringBasics();
-        System.out.println(result);
+//        StringBuffer result = Stringy.stringBasics();
+//        System.out.println(result);
+        Stringy.pigLatin();
     }
 }
