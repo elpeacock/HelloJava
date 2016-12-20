@@ -42,18 +42,38 @@ public class Main {
 //        Stringy.pigLatin();
 
         //Methods
-        System.out.println("Let's get maths-y");
-        System.out.println("enter the first number");
-        Scanner sc = new Scanner (System.in);
-        int x = sc.nextInt();
-        System.out.println("enter the second number");
-        int y = sc.nextInt();
+//        System.out.println("Let's get maths-y");
+//        System.out.println("enter the first number");
+//        Scanner sc = new Scanner (System.in);
+//        int x = sc.nextInt();
+//        System.out.println("enter the second number");
+//        int y = sc.nextInt();
+//
+//        System.out.println( x + " plus " + y + " equals " + Maths.additions(x, y) );
+//        System.out.println( x + " minus " + y + " equals " + Maths.subtractions(x, y) );
+//        System.out.println( x + " times " + y + " equals " + Maths.multiplications(x, y) );
+//        System.out.println( x + " divided by " + y + " equals " + Maths.divisions(x, y) );
+//        System.out.println( "the remainder of " + x + " divided by " + y + " equals " + Maths.modulus(x, y) );
+        String response = "yes";
+        System.out.println("Let's get maths-y: factorials!");
+        do {
+            System.out.println("enter a number between 1 and 10: ");
+            Scanner sc = new Scanner (System.in);
+            int x = sc.nextInt();
+            sc.nextLine();
 
-        System.out.println( x + " plus " + y + " equals " + Maths.additions(x, y) );
-        System.out.println( x + " minus " + y + " equals " + Maths.subtractions(x, y) );
-        System.out.println( x + " times " + y + " equals " + Maths.multiplications(x, y) );
-        System.out.println( x + " divided by " + y + " equals " + Maths.divisions(x, y) );
-        System.out.println( "the remainder of " + x + " divided by " + y + " equals " + Maths.modulus(x, y) );
+            if ( ( x >= 1) && ( x <= 10 ) ) {
+                System.out.println( "coded regular-style: " );
+                System.out.println( "factorial of " + x + " is " + Factorialize.regularStyle(x) );
+
+                System.out.println( "find another factorial? (yes/no): ");
+                response = sc.nextLine();
+            } else {
+                System.out.println( "that number is NOT between 1 and 10, try again!" );
+            }
+        } while (response.trim().equalsIgnoreCase("yes") );
+
+        System.out.println( "ok. peace out girl scout!" );
 
     }
 }
