@@ -75,25 +75,31 @@ public class Main {
 //
 //        System.out.println( "ok. peace out girl scout!" );
 
-        int numOfSides;
-        int firstRoll;
-        int secondRoll;
-        String response = "yes";
+//        int numOfSides;
+//        int firstRoll;
+//        int secondRoll;
+//        String response = "yes";
+//
+//        do {
+//            System.out.println("How many sides does your die have?");
+//            Scanner sc = new Scanner(System.in);
+//            numOfSides = sc.nextInt();
+//            sc.nextLine();
+//
+//            firstRoll = RollDice.rollEmOut(numOfSides);
+//            secondRoll = RollDice.rollEmOut(numOfSides);
+//
+//            System.out.println("You rolled " + firstRoll + " and " + secondRoll);
+//            System.out.println("Roll Again? (yes/no): ");
+//            response = sc.nextLine();
+//
+//        } while ( response.trim().equalsIgnoreCase("yes") );
 
-        do {
-            System.out.println("How many sides does your die have?");
-            Scanner sc = new Scanner(System.in);
-            numOfSides = sc.nextInt();
-            sc.nextLine();
+        //throw catch exceptions
 
-            firstRoll = RollDice.rollEmOut(numOfSides);
-            secondRoll = RollDice.rollEmOut(numOfSides);
-
-            System.out.println("You rolled " + firstRoll + " and " + secondRoll);
-            System.out.println("Roll Again? (yes/no): ");
-            response = sc.nextLine();
-
-        } while ( response.trim().equalsIgnoreCase("yes") );
+        Scanner sc = new Scanner(System.in);
+        Exceptional.enterNameOfStudent(sc);
+        System.out.println(indexOfStudent);
 
     }
 }
