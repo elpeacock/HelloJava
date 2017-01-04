@@ -39,9 +39,9 @@ public class Exceptional {
             return enterNameOfStudent(sc);
         }
         for (int i = 0; i <= 11; i++) {
-                if (inputName.trim().equalsIgnoreCase(studentNames[i])) {
-                    indexOfStudent = i;
-                }
+            if (inputName.trim().equalsIgnoreCase(studentNames[i])) {
+                indexOfStudent = i;
+            }
 
         }
         return indexOfStudent;
@@ -53,6 +53,17 @@ public class Exceptional {
         System.out.println("Student " + name + " is " + age + " years old and is from " + where + "." );
     }
 
+    public static void main(String[] args) {
+        String response = "yes";
+
+        do {
+            Scanner sc = new Scanner(System.in);
+            Exceptional.enterNameOfStudent(sc);
+            Exceptional.getStudentInfo();
+            System.out.println("Get information on another student? (reply yes or no)");
+            response = sc.nextLine();
+        } while (response.equalsIgnoreCase("yes"));
+    }
 }
 
 
