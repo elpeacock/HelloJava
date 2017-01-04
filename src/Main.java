@@ -96,10 +96,14 @@ public class Main {
 //        } while ( response.trim().equalsIgnoreCase("yes") );
 
         //throw catch exceptions
+        String response = "yes";
 
-        Scanner sc = new Scanner(System.in);
-        Exceptional.enterNameOfStudent(sc);
-        System.out.println(indexOfStudent);
-
+        do {
+            Scanner sc = new Scanner(System.in);
+            Exceptional.enterNameOfStudent(sc);
+            Exceptional.getStudentInfo();
+            System.out.println("Get information on another student? (reply yes or no)");
+            response = sc.nextLine();
+        } while (response.equals("yes"));
     }
 }
