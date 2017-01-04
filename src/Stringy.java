@@ -19,8 +19,12 @@ public class Stringy {
         return message;
     }
 
-    public static void pigLatin() {
+    public static void main(String[] args) {
+        System.out.println("working with strings!");
+        StringBuffer result = Stringy.stringBasics();
+        System.out.println(result);
 
+        System.out.println("pig latin exercise");
         String response = "yes";
         String word;
         String translated;
@@ -66,4 +70,5 @@ public class Stringy {
 
         System.out.println("oodgay ebyay!");
     }
+
 }
