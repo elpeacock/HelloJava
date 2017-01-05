@@ -28,7 +28,7 @@ public class Maths {
         return 0;
     }
 
-    public static float divisions (int x, int y) {
+    public static double divisions (int x, int y) {
         if ( checkNumeric(x, y) ) {
             if ( divideByZero(y) ) {
                 return x / y;
