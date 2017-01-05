@@ -34,13 +34,15 @@ public class Exceptional {
                 throw new IllegalArgumentException("Name cannot be blank.");
             }
         } catch (IllegalArgumentException e) {
-//        sc.next(); /* discard incorrect value */
             System.out.println(e.getMessage());
             return enterNameOfStudent(sc);
         }
         for (int i = 0; i <= 11; i++) {
             if (inputName.trim().equalsIgnoreCase(studentNames[i])) {
                 indexOfStudent = i;
+                return indexOfStudent;
+            } else {
+                indexOfStudent = -1;
             }
 
         }
@@ -59,10 +61,16 @@ public class Exceptional {
         do {
             Scanner sc = new Scanner(System.in);
             Exceptional.enterNameOfStudent(sc);
-            Exceptional.getStudentInfo();
+            try {
+                Exceptional.getStudentInfo();
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("We don't have a student by that name, try again!");
+            }
             System.out.println("Get information on another student? (reply yes or no)");
             response = sc.nextLine();
         } while (response.equalsIgnoreCase("yes"));
+
+        System.out.println("ok, thanks for learning about your students...see you next time!");
     }
 }
 
