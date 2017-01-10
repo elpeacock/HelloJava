@@ -97,7 +97,7 @@ public class BattingStats {
     public static String getAnotherBatter (Scanner sc) {
 
         String response;
-        System.out.println("Enter hitting stats for another player? (y or n)");
+        System.out.println("Enter batting stats for another player? (y or n)");
 
         try {
             response = sc.next();
