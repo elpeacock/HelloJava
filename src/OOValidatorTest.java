@@ -5,17 +5,18 @@ import java.util.Scanner;
  */
 public class OOValidatorTest {
     public static void main(String[] args) {
-        int min = -100;
-        int max = 100;
-        String prompt = "please enter an integer between " + min + " and " + max + ".";
-        String doublePrompt = "please enter any number between " + min + " and " + max + ".";
         OOValidator OOV = new OOValidator(new Scanner(System.in));
         System.out.println("Valid Integer Test");
-        System.out.println(prompt);
-        OOV.getIntWithinRange(min, max);
+        OOV.getIntWithinRange("please enter an integer between -100 and 100 ", -100, 100);
+
         System.out.println("Valid Double Test");
-        System.out.println(doublePrompt);
-        OOV.getDoubleWithinRange(min, max);
+        OOV.getDoubleWithinRange("please enter any number between -10.0 and 10.0", -10, 10);
+
+        System.out.println("Valid String Test");
+        OOV.getRequiredString("What is your favorite color?");
+
+        System.out.println("Choose A String");
+        OOV.getChoiceString("Which do you prefer: apple or banana?", "apple", "banana");
 
     }
 }
