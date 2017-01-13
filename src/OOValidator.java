@@ -36,7 +36,6 @@ public class OOValidator {
             if ((checkRange < min) || (checkRange > max)) {
                 throw new IllegalArgumentException("Error! Integer input must be between " + min + " and " + max + ", try again.");
             }
-            System.out.println("Great Success! You have entered a valid integer within range!");
             return checkRange;
 
         } catch (IllegalArgumentException e) {
@@ -70,7 +69,6 @@ public class OOValidator {
             if ((checkDoubleRange < min) || (checkDoubleRange > max)) {
                 throw new IllegalArgumentException("Error! Input must be any number between " + min + " and " + max + ", try again.");
             }
-            System.out.println("Great Success! You have entered a valid number within range");
             return checkDoubleRange;
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
