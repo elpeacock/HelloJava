@@ -81,7 +81,7 @@ public class OOValidator {
         System.out.println(prompt);
         String input;
         try {
-            input = sc.nextLine();
+            input = sc.next();
             if (input.trim().isEmpty()) {
                 throw new InputMismatchException("Error! Input can't be empty, try again.");
             }
