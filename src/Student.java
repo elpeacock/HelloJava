@@ -13,11 +13,30 @@ class Student implements Comparable <Student> {
         this.score = score;
     }
 
-    public String getfullName() {
+    public static String studentFirstName (OOValidator validate) {
+        String firstName = validate.getRequiredString("Enter the Student's first name");
+
+        return firstName;
+    }
+
+    public static String studentLastName (OOValidator validate) {
+        String lastName = validate.getRequiredString("Enter the Student's last name");
+
+        return lastName;
+    }
+
+    public static int studentScore (OOValidator validate) {
+        int score = validate.getIntWithinRange("Enter the Student's score. Scores must be integer values between" +
+                " 0 and 100", 0, 100);
+
+        return score;
+    }
+
+    public String getFullName() {
         return firstName + " " + lastName;
     }
 
-    public int getScore () {
+    public int getScore() {
         return score;
     }
 
