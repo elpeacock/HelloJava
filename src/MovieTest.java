@@ -18,10 +18,12 @@ public class MovieTest {
             movies.add(movieInfo);
         }
 
+        // welcome the user
         System.out.println("Welcome to the movie picker!");
         System.out.println("");
 
         do {
+            // sout category options list
             System.out.println("****************************************");
             System.out.println("*             Category List            *");
             System.out.println("****************************************");
@@ -35,16 +37,22 @@ public class MovieTest {
             System.out.printf("%1$-15s %2$-10s", 6, "musical \n");
             System.out.println("****************************************");
 
+            // sort movies in order to use comparable and print options alphabetically
             Collections.sort(movies);
+            // prompt user for a category choice
             String category = Movie.chooseCategory(validate);
 
+            // loop through movie list and find titles where category matches user category choice
             System.out.println("The " + category + " movies we have are: ");
             for (Movie movie : movies) {
                 if (category.equalsIgnoreCase(movie.getCategory())) {
+                    // print out titles where category matches user category choice
                     System.out.println(movie.getTitle());
                 }
             }
             System.out.println("");
+
+            // prompt to pick another movie
             response = validate.getChoiceString("Pick another movie? (enter y/n)", "y", "n");
 
         } while (response.equalsIgnoreCase("y"));
