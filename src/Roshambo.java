@@ -46,5 +46,11 @@ public enum Roshambo {
         }
         return message;
     }
+
+    public static int calculateTies (RoshamboPlayer human, RoshamboPlayer opponent) {
+        int totalWins = human.gamesWon + opponent.gamesWon;
+        int ties = human.numberOfGamesPlayed - totalWins;
+        return ties;
+    }
 }
 

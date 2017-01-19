@@ -39,7 +39,11 @@ public class RoshamboTest {
         } while (response.equalsIgnoreCase("y"));
         System.out.println("You played " + human.numberOfGamesPlayed + " games against " + opponent.getName()
                 + ". You won " + human.gamesWon + " games, and " + opponent.getName() + " won " + opponent
-                .gamesWon + " games.");
+                .gamesWon + " games. You and " + opponent.getName() + " tied " + Roshambo.calculateTies(human,
+                opponent) + " " +
+                "times.");
         System.out.println("goodbye! Thanks for playing!");
     }
+
+
 }
