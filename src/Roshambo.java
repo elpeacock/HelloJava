@@ -17,7 +17,7 @@ public enum Roshambo {
     public static String compareRoshambo(String myRoshambo, String opponentRoshambo, RoshamboPlayer opponent,
                                          RoshamboPlayer human) {
         String message = "";
-        if (myRoshambo.equals(opponentRoshambo)){
+        if (myRoshambo.equalsIgnoreCase(opponentRoshambo)){
             message = "Tie!!";
         } else if ( (myRoshambo.equalsIgnoreCase("ROCK") ) && (opponentRoshambo.equalsIgnoreCase("PAPER") ) ) {
             message = "Paper covers Rock - " + opponent.getName() + " wins!";
